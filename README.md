@@ -50,13 +50,42 @@
 
 ### 方式二：手动安装
 
-#### 1. 安装依赖
+#### 1. 环境要求
+
+- **Python 版本：** 3.10+
+- **操作系统：** Linux / macOS / Windows
+
+检查 Python 版本：
+
+```bash
+python3 --version
+# 输出应为 Python 3.10.x 或更高
+
+# 或使用 Python 3.10+ 的完整路径
+/usr/bin/python3.10 --version
+```
+
+如果 Python 版本低于 3.10，请先升级 Python：
+
+```bash
+# Ubuntu/Debian
+sudo apt update && sudo apt install python3.10
+
+# macOS (使用 Homebrew)
+brew install python@3.10
+
+# 或使用 pyenv
+pyenv install 3.10.0
+pyenv global 3.10.0
+```
+
+#### 2. 安装依赖
 
 ```bash
 pip install "volcengine-python-sdk[ark]"
 ```
 
-#### 2. 复制技能文件
+#### 3. 复制技能文件
 
 将整个 `jimeng-seedream-skill` 目录复制到 OpenClaw 技能目录：
 

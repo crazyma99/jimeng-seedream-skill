@@ -2,11 +2,30 @@
 即梦 AI 生图技能 - Jimeng Seedream Image Generation
 使用火山引擎方舟官方 SDK (volcenginesdkarkruntime)
 支持：文生图、图生图、单图/组图生成
+
+环境要求：Python 3.10+
 """
 
 import os
+import sys
 import json
 from typing import Optional, List, Dict, Any, Union
+
+# ============================================================
+# 0. Python 版本检查
+# ============================================================
+def check_python_version(min_version=(3, 10)):
+    """检查 Python 版本是否满足要求"""
+    current = sys.version_info[:2]
+    if current < min_version:
+        raise RuntimeError(
+            f"需要 Python {'.'.join(map(str, min_version))} 或更高版本，"
+            f"当前版本: Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
+        )
+    return True
+
+# 在导入时立即检查
+check_python_version()
 
 try:
     from volcenginesdkarkruntime import Ark

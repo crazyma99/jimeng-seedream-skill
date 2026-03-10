@@ -1,7 +1,21 @@
 """
 即梦 AI 生图技能 - 使用示例
 Jimeng Seedream Image Generation - Usage Examples
+
+环境要求：Python 3.10+
 """
+
+import sys
+
+def check_python_version():
+    """检查 Python 版本"""
+    if sys.version_info < (3, 10):
+        print(f"❌ 需要 Python 3.10+，当前版本: Python {sys.version_info.major}.{sys.version_info.minor}")
+        sys.exit(1)
+    print(f"✅ Python 版本: {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
+
+# 检查版本
+check_python_version()
 
 from skills.volcengine import text_to_image, image_to_image, generate
 

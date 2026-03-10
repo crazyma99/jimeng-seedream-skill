@@ -1,5 +1,7 @@
 # 即梦 AI 生图技能 - 依赖列表
 # Jimeng Seedream Image Generation - Dependencies
+# 
+# 环境要求：Python 3.10+
 
 # 火山引擎方舟官方 SDK (包含图像生成支持)
 volcengine-python-sdk[ark]>=1.0.0

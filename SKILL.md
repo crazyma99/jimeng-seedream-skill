@@ -24,6 +24,18 @@ metadata:
 
 ## 快速开始
 
+### 环境要求
+
+- **Python 版本：** 3.10+
+- **依赖：** `volcengine-python-sdk[ark]`
+
+检查 Python 版本：
+
+```bash
+python3 --version
+# 输出应为 Python 3.10.x 或更高
+```
+
 ### 安装依赖
 
 ```bash
