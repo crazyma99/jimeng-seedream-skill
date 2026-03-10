@@ -1,0 +1,29 @@
+name: jimeng-seedream
+version: 1.0.0
+description: 即梦 AI 图片生成技能 - 调用火山引擎 Seedream 4.5 模型生成图片
+author: 亏贼马的强壮大龙虾
+license: MIT
+
+metadata:
+  openclaw:
+    emoji: "🎨"
+    requires:
+      config: ["skills.entries.jimeng-seedream.apiKey"]
+    primaryEnv: "ARK_API_KEY"
+    category: ["image-generation", "ai", "volcengine"]
+
+dependencies:
+  - name: volcenginesdkarkruntime
+    version: ">=1.0.0"
+    install: pip install "volcengine-python-sdk[ark]"
+
+entry:
+  module: __init__
+  functions:
+    - text_to_image
+    - image_to_image
+    - generate
+
+api:
+  base_url: https://ark.cn-beijing.volces.com/api/v3
+  model: doubao-seedream-4-5-251128
