@@ -35,13 +35,28 @@
 
 ## 安装
 
-### 1. 安装依赖
+### 方式一：让龙虾帮你部署（推荐给 OpenClaw 用户）
+
+如果你正在使用 OpenClaw，直接把下面这句话发给你的龙虾：
+
+> **请按照这个 SKILL.md 帮我完成 jimeng-seedream-skill 的安装：**  
+> https://github.com/crazyma99/jimeng-seedream-skill/blob/main/SKILL.md
+
+龙虾会自动完成：
+1. Clone 仓库
+2. Skill 安装部署
+3. 提示你把 API Key 发给它
+4. 将使用方式发送给你
+
+### 方式二：手动安装
+
+#### 1. 安装依赖
 
 ```bash
 pip install "volcengine-python-sdk[ark]"
 ```
 
-### 2. 复制技能文件
+#### 2. 复制技能文件
 
 将整个 `jimeng-seedream-skill` 目录复制到 OpenClaw 技能目录：
 
