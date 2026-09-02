@@ -33,6 +33,8 @@ try:
 except ImportError:
     raise ImportError("请安装依赖：pip install 'volcengine-python-sdk[ark]'")
 
+from .atlas_provider import atlas_image_to_image, atlas_text_to_image
+
 
 # ============================================================
 # 1. 配置与客户端初始化
@@ -275,5 +277,7 @@ __all__ = [
     "text_to_image",
     "image_to_image",
     "generate",
+    "atlas_text_to_image",
+    "atlas_image_to_image",
     "DEFAULT_MODEL",
 ]

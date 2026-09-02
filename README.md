@@ -127,6 +127,28 @@ export ARK_API_KEY="your-api-key"
 }
 ```
 
+### 可选：Atlas Cloud
+
+默认调用仍使用火山引擎方舟。若需要通过 Atlas Cloud 的统一异步 API 调用
+Seedream 4.5，可额外配置：
+
+```bash
+export ATLASCLOUD_API_KEY="your-api-key"
+```
+
+```python
+from skills.volcengine.atlas_provider import atlas_text_to_image
+
+result = atlas_text_to_image(
+    prompt="4K超高清猫咪，橘色，可爱，温暖阳光",
+    size="2048*2048",
+)
+print(result["images"][0]["url"])
+```
+
+`atlas_image_to_image` 接受一条或最多十条公开图片 URL。两个 Atlas 函数都会实时读取
+模型目录和输入 schema；付费生成请求只提交一次，仅结果查询会进行有界退避。
+
 ## 快速开始
 
 ### 文生图

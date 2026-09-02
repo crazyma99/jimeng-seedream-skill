@@ -27,6 +27,8 @@ entry:
     - text_to_image
     - image_to_image
     - generate
+    - atlas_text_to_image
+    - atlas_image_to_image
 
 api:
   base_url: https://ark.cn-beijing.volces.com/api/v3
