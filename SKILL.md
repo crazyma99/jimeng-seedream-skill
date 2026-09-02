@@ -131,6 +131,14 @@ result = generate(prompt="换装", image=["url1", "url2"])
 |--------|------|
 | `ARK_API_KEY` | 火山引擎 API Key |
 | `VOLCENGINE_BASE_URL` | API 基础 URL |
+| `ATLASCLOUD_API_KEY` | 可选 Atlas Cloud provider 的 API Key |
+
+### 可选 Atlas Cloud provider
+
+默认 `text_to_image`、`image_to_image` 和 `generate` 仍使用火山引擎方舟。需要统一
+Atlas Cloud 异步接口时，可显式导入 `atlas_text_to_image` 或
+`atlas_image_to_image`；它们会实时校验模型目录和输入 schema，付费生成 POST 不重试，
+仅结果 GET 使用有界退避。
 
 ## 参考文件
 
